@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Johnson - Frontend Developer Portfolio</title>
+    <title>Jake Xiang - Frontend Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav id="navbar">
         <div class="nav-brand">
-            <span>Alex Johnson</span>
+            <span>Jake Xiang</span>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
             <li><a href="#home" class="nav-link">Home</a></li>
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-        <!-- Mobile menu toggle (for bonus implementation) -->
-        <div class="nav-toggle">
+        <!-- Mobile menu toggle -->
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Alex Johnson</h1>
+            <h1 class="hero-title">Jake Xiang</h1>
             <p class="hero-subtitle">Frontend Developer & UI Designer</p>
             <p class="hero-tagline">Creating beautiful, responsive web experiences with modern technologies</p>
             <div class="hero-buttons">
@@ -333,7 +333,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Alex Johnson. All rights reserved.</p>
+                <p>&copy; 2024 Jake Xiang. All rights reserved.</p>
                 <div class="social-links">
                     <a href="#" class="social-link">GitHub</a>
                     <a href="#" class="social-link">LinkedIn</a>
@@ -344,7 +344,7 @@
         </div>
     </footer>
 
-    <!-- TODO: Create script.js file and add JavaScript functionality -->
+    <!-- Parts 1–3: navigation, project filtering, and mobile menu -->
     <script src="script.js"></script>
 </body>
 </html>

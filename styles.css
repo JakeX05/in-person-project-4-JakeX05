@@ -54,6 +54,11 @@ body {
     background: var(--bg-light);
 }
 
+/* Keep section headings visible below the sticky navigation. */
+section[id] {
+    scroll-margin-top: 90px;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.2;
@@ -80,6 +85,9 @@ a:hover {
 
 /* Navigation Bar - TO BE ENHANCED WITH FLEXBOX */
 #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: var(--spacing-sm) var(--spacing-md);
     position: sticky;
@@ -118,6 +126,8 @@ a:hover {
 
 /* Mobile Menu Toggle */
 .nav-toggle {
+    background: transparent;
+    border: none;
     display: none;
     width: 30px;
     height: 30px;
@@ -540,6 +550,47 @@ a:hover {
 
 /* Responsive Design - Basic */
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: var(--spacing-sm);
+        background: var(--secondary-color);
+        text-align: center;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .nav-menu li {
+        margin-left: 0;
+    }
+
+    .nav-link {
+        display: block;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
     h1 { font-size: 2rem; }
     h2 { font-size: 1.75rem; }
 
